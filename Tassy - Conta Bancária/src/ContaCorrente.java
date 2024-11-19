@@ -77,24 +77,21 @@ public class ContaCorrente {
         this.valorLimite = valorLimite;
     }
     
-    public double depositar(double valor){
-        double soma;
-        soma = getValorLimite()+ valor;
-        setSaldo(soma);
-        return soma;
+    public void depositar(double valor){
+        saldo = saldo + valor;
     }
     
-    public double sacar(double valor){
+    public boolean sacar(double valor){
         double calcSacar = 0;
-        if (valor > getValorLimite()){
-           System.out.println("valor maior que o limite");
-           return getSaldo();
+        if (saldo >= valor){
+           saldo-=valor;
+           return true;
+        }else if(saldo+valorLimite >= valor){
+          saldo = saldo+valorLimite - valor;
+          return true;
         }else{
-        calcSacar = getValorLimite() - valor;
-        double novoSaldo;
-        novoSaldo = getSaldo() - calcSacar;
-        setSaldo(novoSaldo);
-        return novoSaldo;
+            System.err.println("saldo insufivente");
+        return false;
         }
     }
     

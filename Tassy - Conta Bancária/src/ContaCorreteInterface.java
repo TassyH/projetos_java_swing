@@ -60,6 +60,7 @@ public class ContaCorreteInterface extends javax.swing.JFrame {
         inputNumero = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         textLimite = new javax.swing.JLabel();
+        txtAvisoSaldo = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -163,37 +164,45 @@ public class ContaCorreteInterface extends javax.swing.JFrame {
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textLimite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(inputValor, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                                    .addComponent(inputNome)
-                                    .addComponent(inputAgencia)
-                                    .addComponent(inputNumero))
-                                .addGap(44, 44, 44))
-                            .addComponent(textLimite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnExtrato)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(inputValor, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                                        .addComponent(inputNome)
+                                        .addComponent(inputAgencia)
+                                        .addComponent(inputNumero)))
+                                .addGap(44, 44, 44))))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
-                                .addGap(31, 31, 31))
+                                .addGap(103, 103, 103))
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnDepositar)
+                                .addGap(51, 51, 51)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnDepositar)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
-                                        .addComponent(btnSacar))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(textNome)
-                                            .addComponent(jLabel5)
-                                            .addComponent(textAgencia)
-                                            .addComponent(textNumero))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(15, 15, 15)
+                                                .addComponent(textNome))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(jLabel5)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(txtAvisoSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(textAgencia, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(textNumero, javax.swing.GroupLayout.Alignment.TRAILING))))
                                         .addGap(21, 21, 21)
-                                        .addComponent(textSaldo)))
-                                .addGap(47, 47, 47)))
-                        .addComponent(btnExtrato)))
+                                        .addComponent(textSaldo))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(btnSacar)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(119, 119, 119)))))
                 .addGap(34, 34, 34))
         );
         layout.setVerticalGroup(
@@ -217,7 +226,7 @@ public class ContaCorreteInterface extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
                     .addComponent(textLimite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(inputValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -229,16 +238,17 @@ public class ContaCorreteInterface extends javax.swing.JFrame {
                     .addComponent(btnExtrato)
                     .addComponent(btnDepositar))
                 .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textSaldo)
-                    .addComponent(jLabel5))
+                .addComponent(textSaldo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(textNome)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(textAgencia)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(textNumero)
-                .addGap(22, 22, 22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textNumero)
+                    .addComponent(txtAvisoSaldo)
+                    .addComponent(jLabel5))
+                .addGap(30, 30, 30))
         );
 
         pack();
@@ -251,12 +261,14 @@ public class ContaCorreteInterface extends javax.swing.JFrame {
     private void btnSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSacarActionPerformed
         valorEntrada = Double.parseDouble(inputValor.getText().toString());
        
-        saldo = cc.sacar(valorEntrada);
+        cc.sacar(valorEntrada);
+        saldo = cc.getSaldo();
         String saldoTexto = String.valueOf(saldo);
         textSaldo.setText(saldoTexto);
         if(valorEntrada <= cc.getSaldo()){
             cc.setSaldo(saldo);
         }else{
+            textSaldo.setText("LIMITE INSUFICENTE!!!!!!!!!!");
             System.out.println("unheee saldo insuficnete");
             System.out.println(saldo);
         }
@@ -266,7 +278,8 @@ public class ContaCorreteInterface extends javax.swing.JFrame {
 
     private void btnDepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepositarActionPerformed
         valorEntrada = Double.parseDouble(inputValor.getText().toString());
-        saldo = cc.depositar(valorEntrada);
+        cc.depositar(valorEntrada);
+        saldo = cc.getSaldo();
         String saldoTexto = String.valueOf(saldo);
         textSaldo.setText(saldoTexto);
         cc.setSaldo(saldo);
@@ -371,5 +384,6 @@ public class ContaCorreteInterface extends javax.swing.JFrame {
     private javax.swing.JLabel textNome;
     private javax.swing.JLabel textNumero;
     private javax.swing.JLabel textSaldo;
+    private javax.swing.JLabel txtAvisoSaldo;
     // End of variables declaration//GEN-END:variables
 }
